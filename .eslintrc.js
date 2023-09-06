@@ -14,7 +14,12 @@ module.exports = {
   plugins: ["@typescript-eslint", "prettier"],
   root: true,
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
     "no-constant-binary-expression": "error",
     "no-duplicate-imports": "error",
     "no-promise-executor-return": "error",
